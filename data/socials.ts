@@ -4,23 +4,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: "github",
     name: "GitHub",
-    url: "https://github.com",
+    url: "https://github.com/FajarRp11",
     ariaLabel: "GitHub Profile",
     icon: "github",
   },
   {
     id: "linkedin",
     name: "LinkedIn",
-    url: "https://linkedin.com",
+    url: "https://www.linkedin.com/in/kurnia-fajar-rahyudi-putra",
     ariaLabel: "LinkedIn Profile",
     icon: "linkedin",
-  },
-  {
-    id: "twitter",
-    name: "Twitter / X",
-    url: "https://twitter.com",
-    ariaLabel: "Twitter Profile",
-    icon: "twitter",
   },
 ];
 

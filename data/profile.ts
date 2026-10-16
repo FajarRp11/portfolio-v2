@@ -2,7 +2,7 @@ export const PROFILE_DATA = {
   name: "Fajar Rahyu",
   title: "Web Developer",
   tagline: "I build accessible, responsive, and maintainable web applications.",
-  email: "johndoe.dev@gmail.com",
+  email: "fajarrahyu1103@gmail.com",
   narrative: [
     {
       id: "intro",
