@@ -31,6 +31,7 @@ export const PROFILE_DATA = {
     "Node.js",
     "Tailwind CSS",
     "PostgreSQL",
+    "MySQL",
     "Vite",
   ],
 } as const;

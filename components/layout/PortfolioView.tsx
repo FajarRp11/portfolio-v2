@@ -23,7 +23,7 @@ export function PortfolioView() {
           }
         });
       },
-      { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -41,7 +41,7 @@ export function PortfolioView() {
           <AboutSection />
           <ExperienceSection />
           <ProjectsSection />
-          <Footer />
+          {/* <Footer /> */}
         </main>
       </div>
     </div>

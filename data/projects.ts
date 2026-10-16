@@ -76,4 +76,40 @@ export const PROJECTS_DATA: Project[] = [
     liveUrl: "https://flowtask-fajarrahyu.vercel.app/",
     githubUrl: "https://github.com/FajarRp11/flowtask-frontend.git",
   },
+  {
+    id: "smart-cattle",
+    title: "Smart Cattle",
+    category: "IoT & Embedded Systems",
+    year: "2026",
+    shortDesc:
+      "An IoT-based wearable device designed to monitor cattle health indicators and location using physiological sensors, GPS, and LoRa communication.",
+    fullDesc:
+      "Smart Cattle is a final-year project focused on developing an IoT-based wearable device for monitoring cattle health conditions and location. The system integrates physiological sensors, GPS positioning, and LoRa wireless communication to collect and transmit data to a backend system for storage and visualization through a mobile application. The project explores the integration of embedded hardware, wireless communication, and software development to support livestock monitoring.",
+    features: [
+      "Wearable device prototype built around an ESP32-based platform",
+      "Body temperature measurement using the MLX90614 infrared sensor",
+      "Heart rate and blood oxygen saturation monitoring using the MAX30102 sensor",
+      "GPS-based cattle location tracking using the NEO-6M module",
+      "LoRa communication using the SX1276 transceiver",
+      "Sensor data transmission to a receiver and backend system",
+      "Sensor data storage using PostgreSQL",
+      "Mobile application for viewing cattle monitoring data",
+      "Wireless communication evaluation using RSSI and SNR measurements",
+      "Sensor accuracy testing against reference measurement devices",
+    ],
+    architecture:
+      "The system uses an ESP32-based wearable device with MLX90614, MAX30102, and NEO-6M modules. Sensor readings and location data are transmitted over LoRa using SX1276 transceivers to a receiver connected to the backend. The backend processes and stores the data in PostgreSQL, while a mobile application provides an interface for monitoring the collected information.",
+    tags: [
+      "ESP32",
+      "Embedded Systems",
+      "Internet of Things",
+      "LoRa",
+      "SX1276",
+      "GPS",
+      "MLX90614",
+      "MAX30102",
+      "PostgreSQL",
+      "React Native",
+    ],
+  },
 ];
