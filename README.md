@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fajar Rahyu — Portfolio v2 (Next.js)
 
-## Getting Started
+Clean, modular rewrite of the portfolio using Next.js App Router, React 19, TypeScript, and modern component architecture.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```text
+portfolio-v2/
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css          # Design tokens, layout architecture, dark mode
+│   ├── layout.tsx           # Root layout with fonts, metadata, ThemeProvider
+│   └── page.tsx             # Main entry point mounting PortfolioView
+├── components/
+│   ├── layout/
+│   │   ├── Footer.tsx       # Portfolio footer
+│   │   └── PortfolioView.tsx# Responsive container & scrollspy controller
+│   ├── providers/
+│   │   └── ThemeProvider.tsx# Theme context (system/dark/light) with persistence
+│   ├── sections/
+│   │   ├── AboutSection.tsx # Bio, core tech tags, stats strip
+│   │   ├── ExperienceCard.tsx
+│   │   ├── ExperienceSection.tsx
+│   │   ├── ProjectCard.tsx
+│   │   ├── ProjectDetailModal.tsx # Accessible modal dialog
+│   │   └── ProjectsSection.tsx
+│   ├── sidebar/
+│   │   ├── InpageNav.tsx    # Scrollspy navigation with animated indicators
+│   │   ├── Sidebar.tsx      # Desktop sticky sidebar / mobile header
+│   │   ├── SidebarHeader.tsx# Name, title, tagline
+│   │   ├── SocialLinksRow.tsx # Social icons, copy-to-clipboard button
+│   │   └── ThemeSwitch.tsx  # Theme toggle pill
+│   └── ui/
+│       ├── Icons.tsx        # SVG icons (GitHub, LinkedIn, Twitter, Email, etc.)
+│       ├── Modal.tsx        # Generic accessible dialog with escape key & focus lock
+│       ├── StatUnit.tsx     # Reusable metric statistic unit
+│       └── TagChip.tsx      # Reusable badge tag chip
+├── data/
+│   ├── experience.ts        # Work experience items
+│   ├── profile.ts           # Bio, name, tagline, core technologies
+│   ├── projects.ts          # Project showcase data
+│   ├── socials.ts           # Social links & nav sections
+│   └── stats.ts             # Highlights and metrics
+├── types/
+│   └── portfolio.ts         # TypeScript interfaces
+└── public/
+    └── favicon.svg
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js App Router**: Server-rendered baseline with optimized client boundaries.
+- **Accessible Interactions**: Keyboard-navigable cards (`Enter`/`Space`), Escape key modal dismissal, focus management.
+- **Scrollspy Navigation**: Synchronized active section indicator line using `IntersectionObserver`.
+- **Dynamic Theming**: System/Dark/Light theme switcher with `localStorage` persistence and no flash of unstyled content.
+- **Modular Data Layer**: Content separated from UI components for effortless updates.
